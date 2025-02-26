@@ -1,0 +1,88 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+
+---
+
+<Layout title="Veille Technologique">
+    <Navbar />
+    <main class="veille-container">
+        <h1>Veille Technologique</h1>
+    
+        <section class="veille">
+          <h2>1. L’essor de l’Intelligence Artificielle</h2>
+          <p>
+            L’IA transforme progressivement le monde du travail avec des avancées majeures dans l’automatisation et l’analyse des données. De plus en plus d’entreprises intègrent des solutions d’IA pour améliorer leur productivité.
+          </p>
+          <p class="sources">Sources : 
+            <a href="https://openai.com" target="_blank">OpenAI</a>, 
+            <a href="https://deepmind.com" target="_blank">DeepMind</a>
+          </p>
+        </section>
+    
+        <section class="veille">
+          <h2>2. La montée en puissance de WebAssembly</h2>
+          <p>
+            WebAssembly (WASM) permet d’exécuter du code natif dans le navigateur avec des performances proches du natif. Cette technologie est en train de révolutionner le développement web en apportant plus de rapidité et d’efficacité.
+          </p>
+          <p class="sources">Sources : 
+            <a href="https://webassembly.org" target="_blank">WebAssembly</a>, 
+            <a href="https://developer.mozilla.org/en-US/docs/WebAssembly" target="_blank">MDN Web Docs</a>
+          </p>
+        </section>
+    
+      </main>
+      <Footer />
+    </Layout>
+    
+    <style>
+        .veille-container {
+          padding: 50px 20px;
+          max-width: 800px;
+          margin: auto;
+        }
+      
+        h1 {
+          font-size: 2rem;
+          color: #1e1e1e;
+          text-align: center;
+          margin-top: 40px; /* Décalage vers le bas */
+          margin-bottom: 30px;
+        }
+      
+        .veille {
+          background: #fff;
+          border-radius: 12px;
+          padding: 20px;
+          margin-bottom: 30px;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+      
+        h2 {
+          font-size: 1.3rem;
+          color: #1e1e1e;
+          margin-bottom: 10px;
+        }
+      
+        p {
+          font-size: 1rem;
+          color: #333;
+          margin-bottom: 10px;
+        }
+      
+        .sources {
+          font-size: 0.9rem;
+          color: #666;
+        }
+      
+        .sources a {
+          color: #007bff;
+          text-decoration: none;
+        }
+      
+        .sources a:hover {
+          text-decoration: underline;
+        }
+      </style>
+      

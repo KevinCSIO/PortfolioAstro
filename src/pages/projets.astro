@@ -1,0 +1,54 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Realisation from "../components/Realisation.astro";
+import Footer from "../components/Footer.astro";
+
+---
+
+<Layout title="Mes Réalisations">
+    <Navbar />
+    <main class="projets">
+		<h1>Mes Réalisations</h1>
+	
+		<Realisation 
+		  title="Déclaration des rebuts internes"
+		  description="Interface développée sur SILOG permettant de suivre les pièces défectueuses."
+		  skills={["SILOG", "Base de données", "UX/UI"]}
+		  media={[{ type: "image", src: "/rebuts.png" }]}
+		/>
+	
+		<Realisation 
+		  title="Interface Mail"
+		  description="Refonte de l'interface de gestion des emails sur SILOG."
+		  skills={["SILOG", "UX/UI", "HTML/CSS"]}
+		  media={[{ type: "image", src: "/mail-interface.png" }]}
+		/>
+	
+		<Realisation 
+		  title="Application Mobile Kotlin"
+		  description="Développement d'une application Android pour gérer les stocks."
+		  skills={["Kotlin", "Android Studio", "API REST"]}
+		  media={[{ type: "video", src: "/app-demo.mp4" }]}
+		/>
+	
+	  </main>
+	  <Footer />
+	</Layout>
+	
+	<style>
+	  .projets {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 40px;
+		padding: 50px 20px;
+	  }
+	
+	  h1 {
+		font-size: 2rem;
+		color: #1e1e1e;
+		margin-top: 40px; /* Décalage vers le bas */
+        margin-bottom: 30px;
+	  }
+	</style>
