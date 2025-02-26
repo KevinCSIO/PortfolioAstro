@@ -1,13 +1,11 @@
 ---
-const {title, description, link} = Astro.props
+const {title, description} = Astro.props
 ---
 
 <article class="project-card">
     <h3>{title}</h3>
     <div>
-        <a href={link} target="_blank">
-            <p>{description}</p>
-        </a>
+        <p>{description}</p>
     </div>
 </article>
 
@@ -16,8 +14,8 @@ const {title, description, link} = Astro.props
         display: flex;
         flex-direction: column;
         justify-content: end;
-        width: 260px;
-        height: 210px;
+        width: 320px;
+        height: 260px;
         padding: 20px;
         background-color: #1e1e1e;
         background: linear-gradient(160deg, rgb(59, 59, 59) 10%, rgba(30,30,30,1) 100%);
@@ -32,21 +30,18 @@ const {title, description, link} = Astro.props
         font-weight: 600;
         font-size: 35px;
         margin: 0;
+        justify-content: center;
     }
 
     .project-card > div {
         border-top: 1px solid #fff;
     }
 
-    .project-card > div > a {
+    .project-card > div > p {
         text-decoration: none;
         color: #d1d1d1;
         font-weight: 300;
         font-size: 14px;
-        transition: all .3s;
     }
 
-    .project-card > div > a:hover {
-        color: orange;
-    }
 </style>
